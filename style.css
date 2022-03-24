@@ -1,0 +1,254 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+}
+
+main {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 330px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.main-image {
+    max-width: 330px;
+    max-height: 220px;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+}
+
+.main-image img {
+    max-width: 330px;
+
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    max-width: 82%;
+    gap: .5rem;
+    margin: auto;
+    margin-top: -30px;
+    letter-spacing: .5px;
+    line-height: 1.5;
+}
+
+
+.heading {
+    color: hsl(217, 19%, 35%);
+    justify-content: center;
+    margin: 30px 0 10px 0;
+    font-size: 13.5px;
+}
+
+.description {
+    color: hsl(214, 17%, 51%);
+}
+
+.author {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+}
+
+.author-main {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    color: hsl(217, 19%, 35%);
+    align-items: center;
+    margin-top: 35px;
+}
+
+.author-main-descripton {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.author-main-image img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.author-main-nd {
+    letter-spacing: .5px;
+    line-height: 1.5;
+}
+
+.author-main-nd p {
+    color: hsl(212, 23%, 69%);
+}
+
+.author-main-share-btn button {
+    border-radius: 50%;
+    border: none;
+    padding: 10px;
+    background-color: hsl(210, 46%, 95%);
+    cursor: pointer;
+}
+
+
+.author-share {
+    background-color: hsl(217, 19%, 35%);
+    display: none;
+}
+
+.author-share-main {
+    display: flex;
+    max-width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 15px;
+}
+
+.author-share-text {
+    display: flex;
+    gap: 1rem;
+}
+
+.author-share-text p {
+    color: rgba(255, 255, 255, 0.397);
+    letter-spacing: 3px;
+    font-weight: 500;
+    align-self: center;
+    font-size: 12px;
+}
+
+.author-share-icons a {
+    color: white;
+    font-size: 20px;
+    padding: 6px;
+}
+
+
+
+.share-icon button {
+    border-radius: 50%;
+    border: none;
+    padding: 10px;
+    background-color: hsl(214, 17%, 51%);
+    cursor: pointer;
+
+}
+
+.share-icon img {
+    width: 13px;
+}
+
+@media screen and (min-width: 475px) {
+    main {
+        flex-direction: row;
+        max-width: 700px;
+        min-height: 280px;
+        overflow: visible;
+    }
+
+    .main-image {
+        overflow: hidden;
+        max-width: 40%;
+        margin-bottom: 0;
+        max-height: 300px;
+    }
+
+    .main-image img {
+        display: block;
+        max-width: 350px;
+        min-height: 5vh;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        max-width: 61%;
+        margin-top: 5%;
+
+
+    }
+
+    .heading {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .description {
+        width: 100%;
+        font-size: 12px;
+        text-align: justify;
+    }
+
+    .author {
+        width: 82%;
+        margin: auto;
+    }
+
+    .author-main {
+        justify-content: space-between;
+        align-items: center;
+        margin-top: -10px;
+        font-size: 11px;
+    }
+
+    .author-main-image img {
+        width: 35px;
+    }
+
+    .author-main-share-btn button {
+        padding: 8px;
+    }
+
+    #share1 img {
+        width: 12px;
+    }
+
+
+    .author-share {
+        position: absolute;
+        right: -9%;
+        top: 45%;
+        width: 33%;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    .author-share::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -10px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+    }
+
+    .author-share-main {
+        justify-content: space-around;
+
+    }
+
+    .share-icon {
+        display: none;
+    }
+}
